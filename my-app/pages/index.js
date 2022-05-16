@@ -173,7 +173,7 @@ const buyCoffee = async (amount) => {
       <Head>
         <title>OMA Coffee Dapp</title>
         <meta name="description" content="This is a Tipping site" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet"/>
         <link rel="icon" href="/logo.svg" />
       </Head>
 
