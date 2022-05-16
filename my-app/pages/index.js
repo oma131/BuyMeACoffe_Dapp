@@ -179,7 +179,7 @@ const buyCoffee = async (amount) => {
       <nav className="border-b border-indigo-200">
         <div className="flex items-center justify-between h-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8">
           <h1 className="flex items-center">
-            <Image src="/mainlogo.svg" width={130} height={130}/>
+            <Image src="/mainlogo.svg" width={130} height={130} alt="Logo image"/>
           </h1>
       
           <div className="flex items-center justify-between">
@@ -303,7 +303,7 @@ const buyCoffee = async (amount) => {
                 Connect your wallet 
               </button>
               <div>
-              <Image src="/useimage.svg" height={400} width={400}/>
+              <Image src="/useimage.svg" height={400} width={400} alt="Girl sitting with coffee"/>
             </div> 
           </div>
         )}
@@ -334,7 +334,7 @@ const buyCoffee = async (amount) => {
                         </svg>
                     </div>
                     <p className="text-2xl font-bold text-gray-900 dark:text-white">{memo.message}</p>
-                    <p className="mt-2 text-gray-900 dark:text-white">`&#9200;` {memo.timestamp.toString()}</p>
+                    <p className="mt-2 text-gray-900 dark:text-white">&#9200; {memo.timestamp.toString()}</p>
                 </div>
             </div>
         </div>
@@ -349,7 +349,7 @@ const buyCoffee = async (amount) => {
           rel="noopener noreferrer"
           className="text-slate-900 dark:text-white"
         >
-          Created with `&#128156;` by OMA for Alchemy's Road to Web3 lesson two!
+          Created with &#128156; by OMA for Alchemy`s Road to Web3 lesson two!
         </a>
       </footer>
     </div>
