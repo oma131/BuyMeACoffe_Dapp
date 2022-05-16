@@ -2,7 +2,7 @@ import useDarkMode from "../useDarkmode";
 import abi from '../utils/BuyMeACoffee.json';
 import { ethers } from "ethers";
 import Head from 'next/head'
-// import Image from 'next/image'
+import Image from 'next/image'
 import React, { useEffect, useState } from "react";
 import styles from '../styles/Home.module.css'
 
@@ -173,14 +173,13 @@ const buyCoffee = async (amount) => {
       <Head>
         <title>OMA Coffee Dapp</title>
         <meta name="description" content="This is a Tipping site" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet"/>
         <link rel="icon" href="/logo.svg" />
       </Head>
 
       <nav className="border-b border-indigo-200">
         <div className="flex items-center justify-between h-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8">
           <h1 className="flex items-center">
-            <img className="w-20 h-20" src="../mainlogo.svg"/>
+            <Image src="/mainlogo.svg" width={130} height={130}/>
           </h1>
       
           <div className="flex items-center justify-between">
@@ -304,7 +303,7 @@ const buyCoffee = async (amount) => {
                 Connect your wallet 
               </button>
               <div>
-              <img className="object-contain h-68 w-116 mt-5" src="../useimage.svg"/>
+              <Image src="/useimage.svg" height={400} width={400}/>
             </div> 
           </div>
         )}
@@ -331,11 +330,11 @@ const buyCoffee = async (amount) => {
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                         >
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        <path strokeLineCap="round" strokeLineJoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
                     </div>
                     <p className="text-2xl font-bold text-gray-900 dark:text-white">{memo.message}</p>
-                    <p className="mt-2 text-gray-900 dark:text-white">&#9200; {memo.timestamp.toString()}</p>
+                    <p className="mt-2 text-gray-900 dark:text-white">`&#9200;` {memo.timestamp.toString()}</p>
                 </div>
             </div>
         </div>
@@ -350,7 +349,7 @@ const buyCoffee = async (amount) => {
           rel="noopener noreferrer"
           className="text-slate-900 dark:text-white"
         >
-          Created with &#128156; by OMA for Alchemy's Road to Web3 lesson two!
+          Created with `&#128156;` by OMA for Alchemy's Road to Web3 lesson two!
         </a>
       </footer>
     </div>
