@@ -166,7 +166,7 @@ const buyCoffee = async (amount) => {
         buyMeACoffee.off("NewMemo", onNewMemo);
       }
     }
-  }, []);
+  },);
   
   return (
     <div className="p-5 dark:bg-gray-900 bg-true-gray-50">
@@ -235,6 +235,10 @@ const buyCoffee = async (amount) => {
       <main className={styles.main}>
         <h1 className={styles.title}>
             <span className="text-slate-900 dark:text-white">Buy OMA a Coffee &#128521;</span>
+            <p className="text-xl text-blue-gray-900 dark:text-white">
+                Everyone should believe in something. <br/>
+                I believe I will have another coffee.
+            </p>
         </h1>
         
         {currentAccount ? (
