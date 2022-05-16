@@ -1,4 +1,4 @@
-import useDarkMode from "../useDarkmode";
+import useDarkMode from "../useDarkMode";
 import abi from '../utils/BuyMeACoffee.json';
 import { ethers } from "ethers";
 import Head from 'next/head'
