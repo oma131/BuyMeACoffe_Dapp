@@ -84,12 +84,12 @@ const buyCoffee = async (amount) => {
 					message ? message : 'Enjoy your coffee!',
 					{ value: ethers.utils.parseEther(amount) }
 				);
-
-				await coffeeTxn.wait();
-
+                
+                await coffeeTxn.wait();
+            
 				console.log('mined ', coffeeTxn.hash);
 
-				console.log('coffee purchased!');
+				alert('coffee purchased!');
 
 				// Clear the form fields.
 				setName('');
@@ -231,7 +231,7 @@ const buyCoffee = async (amount) => {
         </div>
       </nav>
 
-      <main className={styles.main}>
+      <main className={styles.main}> 
         <h1 className={styles.title}>
             <span className="text-slate-900 dark:text-white">Buy OMA a Coffee &#128521;</span>
             <p className="text-xl text-blue-gray-900 dark:text-white">
@@ -250,6 +250,7 @@ const buyCoffee = async (amount) => {
                 <input
                   id="name"
                   type="text"
+                  value={name}
                   placeholder="Enter Name"
                   onChange={onNameChange}
                   className="w-full p-4 pr-12 text-sm border-black-400 bg-gray-100 dark:bg-black text-slate-900 dark:text-white rounded-lg shadow-sm"
@@ -266,6 +267,7 @@ const buyCoffee = async (amount) => {
                   rows={3}
                   placeholder="Enjoy your coffee!"
                   id="message"
+                  value={message}
                   className="w-full p-4 pr-12 text-sm border-black-400 bg-gray-100 dark:bg-black text-slate-900 dark:text-white rounded-lg shadow-sm"
                   onChange={onMessageChange}
                   required
@@ -319,7 +321,7 @@ const buyCoffee = async (amount) => {
         {currentAccount && (memos.map((memo, idx) => {
             return (
             <div key={idx} className="w-64 p-1 mb-10 shadow-xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-2xl">
-            <div className="block p-6 bg-white dark:bg-black sm:p-8 rounded-xl">
+            <div className=" p-6 bg-white dark:bg-black sm:p-8 rounded-xl">
                 <div className="mt-1 sm:pr-8">
                     <div className="flex justify-between">
                         <p className="text-xl font-bold text-gray-700 dark:text-white">{memo.name} </p>
